@@ -30,3 +30,10 @@ yarn-error.log*
 
 # ESLint
 .eslintcache
+
+
+*.bs*.js
+/.cache/
+/.graphql_ppx_cache/
+/lib/bs/
+/coverage/

@@ -3,30 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.4.16",
     "@glennsl/bs-jest": "^0.6.0",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "bs-platform": "^8.3.3",
-    "bs-react-testing-library": "^0.8.0",
+    "@reasonml-community/graphql-ppx": "^1.2.2",
+    "@rescript/react": "^0.10.3",
+    "bs-platform": "^9.0.2",
+    "graphql": "^15.6.1",
+    "html-webpack-plugin": "4.3.0",
     "npm-run-all": "^4.1.5",
-    "react": "^0.0.0-experimental-3c4c1c470-20211021",
-    "react-dom": "^0.0.0-experimental-3c4c1c470-20211021",
-    "react-scripts": "^4.0.1",
-    "reason-react": "^0.9.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "rescript-apollo-client": "^2.2.0",
+    "subscriptions-transport-ws": "^0.9.19",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "run-p start:*",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "bsb -make-world",
-    "start:re": "bsb -make-world -w",
-    "start:cra": "react-scripts start",
-    "prebuild": "bsb -clean-world -make-world"
+    "clean": "bsb -clean-world",
+    "graphql-server": "graphql-client-example-server",
+    "server": "webpack-dev-server",
+    "start": "bsb -make-world -w"
   },
-  "eslintConfig": null,
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,8 +35,10 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": {
-    "react": "0.0.0-experimental-4ead6b530",
-    "react-dom": "0.0.0-experimental-4ead6b530"
+  "devDependencies": {
+    "gentype": "^4.2.0",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
   }
 }

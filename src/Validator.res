@@ -1,14 +1,12 @@
 @react.component
-let make = (~validators) => {
-  let allValidators = Belt.Array.mapWithIndex(validators, (ind, validator) => {
-    let monikerName = validator["moniker"]
-    <li key={Belt.Int.toString(ind)}>
+let make = (~moniker) => {
+  <div className="validator-wrapper">
+    <ul className="validator-list">
+    <li>
       <div className="validator-inner">
-        <span className="validator-txt"> {monikerName} </span>
+        <span className="validator-txt"> { moniker -> React.string } </span>
       </div>
     </li>
-  })
-  <div className="validator-wrapper">
-    <ul className="validator-list"> {React.array(allValidators)} </ul>
+    </ul>
   </div>
 }
